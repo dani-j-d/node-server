@@ -9,7 +9,7 @@ const password = process.env.PASSWORD;
 
 app.get('/', (req, res) => {
     res.send('This is the tunnel created Ngrok with Http Auth');
-})
+});
 
 const server = app.listen(process.env.PORT, () => {
     console.log('Express listening at ', server.address().port);
@@ -21,7 +21,7 @@ ngrok.connect({
     auth : `${user}:${password}`
 }, (err, url) => {
     if (err) {
-        console.log('Error while connecting Ngrok', err);
+        console.err('Error while connecting Ngrok');
         return new Error('Ngrok Failed');
     } else {
         console.log('Tunnel created -> ', url);

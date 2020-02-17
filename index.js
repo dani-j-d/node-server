@@ -16,7 +16,7 @@ app.engine('.hbs', exphbs({
 
 app.get('/', (request, response)=>{
     response.render('home',{
-        name: 'John'
+        name: 'John Jacobs'
     })
 })
 
