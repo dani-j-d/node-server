@@ -8,7 +8,7 @@ const user = process.env.USER;
 const password = process.env.PASSWORD;
 
 app.get('/', (req, res) => {
-    res.semd('This is the tunnel created Ngrok with Http Auth');
+    res.send('This is the tunnel created Ngrok with Http Auth');
 })
 
 const server = app.listen(process.env.PORT, () => {
